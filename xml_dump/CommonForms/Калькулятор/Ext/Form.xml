@@ -1,0 +1,1021 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Расчет стоимости перевозки</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницы" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>Swipe</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="32"/>
+			<ChildItems>
+				<Page name="ГруппаПараметры" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="34"/>
+					<ChildItems>
+						<UsualGroup name="Группа3" id="237">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="238"/>
+							<ChildItems>
+								<InputField name="ГородОтправки" id="1">
+									<DataPath>ГородОтправки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Откуда</v8:content>
+										</v8:item>
+									</Title>
+									<Height>1</Height>
+									<HorizontalStretch>true</HorizontalStretch>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="ГородОтправкиКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="ГородОтправкиРасширеннаяПодсказка" id="3"/>
+									<Events>
+										<Event name="OnChange">ГородОтправкиПриИзменении</Event>
+										<Event name="AutoComplete">ГородОтправкиАвтоПодбор</Event>
+									</Events>
+								</InputField>
+								<InputField name="ГородПолучения" id="7">
+									<DataPath>ГородПолучения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Куда</v8:content>
+										</v8:item>
+									</Title>
+									<Height>1</Height>
+									<HorizontalStretch>true</HorizontalStretch>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="ГородПолученияКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="ГородПолученияРасширеннаяПодсказка" id="9"/>
+									<Events>
+										<Event name="OnChange">ГородПолученияПриИзменении</Event>
+										<Event name="AutoComplete">ГородПолученияАвтоПодбор</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа4" id="239">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Описание груза</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="240"/>
+							<ChildItems>
+								<InputField name="ТипГруза" id="22">
+									<DataPath>ТипГруза</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тариф</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<ListChoiceMode>true</ListChoiceMode>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Корреспонденция</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Документы</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Посылка S до 2 кг</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ПосылкаS</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Посылка M до 5 кг</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ПосылкаM</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Посылка L до 10 кг</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ПосылкаL</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Стандарт (от 10 кг)</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Стандарт</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Легковые колеса и диски</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">лКолеса</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Грузовые колеса и диски</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">гКолеса</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ТипГрузаКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="ТипГрузаРасширеннаяПодсказка" id="24"/>
+									<Events>
+										<Event name="OnChange">ТипГрузаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ОбщийВес" id="16">
+									<DataPath>ОбщийВес</DataPath>
+									<HorizontalStretch>true</HorizontalStretch>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="ОбщийВесКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="ОбщийВесРасширеннаяПодсказка" id="18"/>
+									<Events>
+										<Event name="OnChange">ОбщийВесПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ОбщаяСтоимостьГруза" id="13">
+									<DataPath>ОбщаяСтоимостьГруза</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Оценочная стоимость (грн.)</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="ОбщаяСтоимостьГрузаКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="ОбщаяСтоимостьГрузаРасширеннаяПодсказка" id="15"/>
+									<Events>
+										<Event name="OnChange">ОбщаяСтоимостьГрузаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа5" id="241">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Параметры груза</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="242"/>
+							<ChildItems>
+								<InputField name="КоличествоМест" id="71">
+									<DataPath>КоличествоМест</DataPath>
+									<HorizontalStretch>true</HorizontalStretch>
+									<SpinButton>true</SpinButton>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="КоличествоМестКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="КоличествоМестРасширеннаяПодсказка" id="73"/>
+								</InputField>
+								<InputField name="Высота" id="4">
+									<DataPath>ВысотаГруза</DataPath>
+									<Visible>false</Visible>
+									<HorizontalStretch>true</HorizontalStretch>
+									<SpinButton>true</SpinButton>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
+									<ContextMenu name="ВысотаКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="ВысотаРасширеннаяПодсказка" id="6"/>
+									<Events>
+										<Event name="OnChange">ВысотаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Длина" id="10">
+									<DataPath>ДлинаГруза</DataPath>
+									<Visible>false</Visible>
+									<HorizontalStretch>true</HorizontalStretch>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ДлинаКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="ДлинаРасширеннаяПодсказка" id="12"/>
+									<Events>
+										<Event name="OnChange">ДлинаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Ширина" id="25">
+									<DataPath>ШиринаГруза</DataPath>
+									<Visible>false</Visible>
+									<HorizontalStretch>true</HorizontalStretch>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ШиринаКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="ШиринаРасширеннаяПодсказка" id="27"/>
+									<Events>
+										<Event name="OnChange">ШиринаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelField name="ОбщийОбъем" id="19">
+									<DataPath>ОбщийОбъем</DataPath>
+									<Visible>false</Visible>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Объем (м3)</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="ОбщийОбъемКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="ОбщийОбъемРасширеннаяПодсказка" id="21"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа6" id="243">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Параметры груза</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="244"/>
+							<ChildItems>
+								<InputField name="КоличествоШин" id="28">
+									<DataPath>КоличествоМест</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Количество шин</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<SpinButton>true</SpinButton>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="КоличествоШинКонтекстноеМеню" id="29"/>
+									<ExtendedTooltip name="КоличествоШинРасширеннаяПодсказка" id="30"/>
+								</InputField>
+								<UsualGroup name="ГруппаТипыШин" id="44">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа типы шин</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа типы шин</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаТипыШинРасширеннаяПодсказка" id="45"/>
+									<ChildItems>
+										<RadioButtonField name="ТипыШин" id="41">
+											<DataPath>ТипыШин</DataPath>
+											<RadioButtonType>RadioButtons</RadioButtonType>
+											<ContextMenu name="ТипыШинКонтекстноеМеню" id="42"/>
+											<ExtendedTooltip name="ТипыШинРасширеннаяПодсказка" id="43"/>
+											<Events>
+												<Event name="OnChange">ТипыШинПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа7" id="245">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Доп. услуги</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="246"/>
+							<ChildItems>
+								<CommandBar name="Группа1" id="215">
+									<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="216"/>
+									<ChildItems>
+										<Button name="СписокДобавить" id="217">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.СписокДобавить</CommandName>
+											<ExtendedTooltip name="СписокДобавитьРасширеннаяПодсказка" id="218"/>
+										</Button>
+										<Button name="Удалить" id="219">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.ДопУслугиСписок.StandardCommand.Delete</CommandName>
+											<ExtendedTooltip name="УдалитьРасширеннаяПодсказка" id="220"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+								<Table name="ДопУслугиСписок" id="194">
+									<Representation>List</Representation>
+									<CommandBarLocation>None</CommandBarLocation>
+									<ChoiceMode>true</ChoiceMode>
+									<SelectionMode>SingleRow</SelectionMode>
+									<Header>false</Header>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>ДопУслугиСписок</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ДопУслугиСписокКонтекстноеМеню" id="195">
+										<Autofill>false</Autofill>
+									</ContextMenu>
+									<AutoCommandBar name="ДопУслугиСписокКоманднаяПанель" id="196"/>
+									<ExtendedTooltip name="ДопУслугиСписокРасширеннаяПодсказка" id="197"/>
+									<SearchStringAddition name="ДопУслугиСписокСтрокаПоиска" id="198">
+										<AdditionSource>
+											<Item>ДопУслугиСписок</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДопУслугиСписокСтрокаПоискаКонтекстноеМеню" id="199"/>
+										<ExtendedTooltip name="ДопУслугиСписокСтрокаПоискаРасширеннаяПодсказка" id="200"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ДопУслугиСписокСостояниеПросмотра" id="201">
+										<AdditionSource>
+											<Item>ДопУслугиСписок</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДопУслугиСписокСостояниеПросмотраКонтекстноеМеню" id="202"/>
+										<ExtendedTooltip name="ДопУслугиСписокСостояниеПросмотраРасширеннаяПодсказка" id="203"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ДопУслугиСписокУправлениеПоиском" id="204">
+										<AdditionSource>
+											<Item>ДопУслугиСписок</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ДопУслугиСписокУправлениеПоискомКонтекстноеМеню" id="205"/>
+										<ExtendedTooltip name="ДопУслугиСписокУправлениеПоискомРасширеннаяПодсказка" id="206"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">ДопУслугиСписокВыбор</Event>
+										<Event name="BeforeAddRow">ДопУслугиСписокПередНачаломДобавления</Event>
+										<Event name="BeforeRowChange">ДопУслугиСписокПередНачаломИзменения</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="ДопУслугиСписокДопУслуга" id="207">
+											<DataPath>ДопУслугиСписок.ДопУслуга</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДопУслугиСписокДопУслугаКонтекстноеМеню" id="208"/>
+											<ExtendedTooltip name="ДопУслугиСписокДопУслугаРасширеннаяПодсказка" id="209"/>
+										</InputField>
+										<InputField name="ДопУслугиСписокЗначение" id="210">
+											<DataPath>ДопУслугиСписок.Значение</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>4</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ContextMenu name="ДопУслугиСписокЗначениеКонтекстноеМеню" id="211"/>
+											<ExtendedTooltip name="ДопУслугиСписокЗначениеРасширеннаяПодсказка" id="212"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа8" id="250">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="251"/>
+							<ChildItems>
+								<Button name="ДопУслуги" id="252">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ДопУслуги</CommandName>
+									<ExtendedTooltip name="ДопУслугиРасширеннаяПодсказка" id="253"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа2" id="224">
+							<Group>Horizontal</Group>
+							<ShowTitle>false</ShowTitle>
+							<ThroughAlign>DontUse</ThroughAlign>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="225"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация2" id="276">
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="Декорация2КонтекстноеМеню" id="277"/>
+									<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="278"/>
+								</LabelDecoration>
+								<Button name="Рассчитать" id="226">
+									<Type>UsualButton</Type>
+									<Height>2</Height>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<CommandName>Form.Command.Рассчитать</CommandName>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<ExtendedTooltip name="РассчитатьРасширеннаяПодсказка" id="227"/>
+								</Button>
+								<LabelDecoration name="Декорация1" id="273">
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="Декорация1КонтекстноеМеню" id="274"/>
+									<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="275"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаРезультат" id="74">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа результат</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа результат</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаРезультатРасширеннаяПодсказка" id="75"/>
+					<ChildItems>
+						<LabelField name="Стоимость" id="62">
+							<DataPath>Стоимость</DataPath>
+							<Visible>false</Visible>
+							<TitleTextColor>web:Green</TitleTextColor>
+							<TitleFont ref="style:NormalTextFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<HorizontalStretch>true</HorizontalStretch>
+							<TextColor>web:Green</TextColor>
+							<Font ref="style:NormalTextFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ContextMenu name="СтоимостьКонтекстноеМеню" id="63"/>
+							<ExtendedTooltip name="СтоимостьРасширеннаяПодсказка" id="64"/>
+						</LabelField>
+						<LabelField name="ВыездЗаГрузомСтоимость" id="234">
+							<DataPath>ВыездЗаГрузомСтоимость</DataPath>
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Стоимоть выезда</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ВыездЗаГрузомСтоимостьКонтекстноеМеню" id="235"/>
+							<ExtendedTooltip name="ВыездЗаГрузомСтоимостьРасширеннаяПодсказка" id="236"/>
+						</LabelField>
+						<LabelField name="ДоставкаГрузаСтоимость" id="68">
+							<DataPath>ДоставкаГрузаСтоимость</DataPath>
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Стоимость доставки</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ДоставкаГрузаСтоимостьКонтекстноеМеню" id="69"/>
+							<ExtendedTooltip name="ДоставкаГрузаСтоимостьРасширеннаяПодсказка" id="70"/>
+						</LabelField>
+						<UsualGroup name="ГруппаДопУслугиРезультат" id="171">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Доп. услуги</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа доп услуги результат</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаДопУслугиРезультатРасширеннаяПодсказка" id="172"/>
+							<ChildItems>
+								<Table name="ДопУслугиРезультат" id="254">
+									<Representation>List</Representation>
+									<CommandBarLocation>None</CommandBarLocation>
+									<ReadOnly>true</ReadOnly>
+									<Header>false</Header>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>ДопУслугиРезультат</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ДопУслугиРезультатКонтекстноеМеню" id="255">
+										<Autofill>false</Autofill>
+									</ContextMenu>
+									<AutoCommandBar name="ДопУслугиРезультатКоманднаяПанель" id="256">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ДопУслугиРезультатРасширеннаяПодсказка" id="257"/>
+									<SearchStringAddition name="ДопУслугиРезультатСтрокаПоиска" id="258">
+										<AdditionSource>
+											<Item>ДопУслугиРезультат</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДопУслугиРезультатСтрокаПоискаКонтекстноеМеню" id="259"/>
+										<ExtendedTooltip name="ДопУслугиРезультатСтрокаПоискаРасширеннаяПодсказка" id="260"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ДопУслугиРезультатСостояниеПросмотра" id="261">
+										<AdditionSource>
+											<Item>ДопУслугиРезультат</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДопУслугиРезультатСостояниеПросмотраКонтекстноеМеню" id="262"/>
+										<ExtendedTooltip name="ДопУслугиРезультатСостояниеПросмотраРасширеннаяПодсказка" id="263"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ДопУслугиРезультатУправлениеПоиском" id="264">
+										<AdditionSource>
+											<Item>ДопУслугиРезультат</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ДопУслугиРезультатУправлениеПоискомКонтекстноеМеню" id="265"/>
+										<ExtendedTooltip name="ДопУслугиРезультатУправлениеПоискомРасширеннаяПодсказка" id="266"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="ДопУслугиРезультатУслуга" id="267">
+											<DataPath>ДопУслугиРезультат.Услуга</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДопУслугиРезультатУслугаКонтекстноеМеню" id="268"/>
+											<ExtendedTooltip name="ДопУслугиРезультатУслугаРасширеннаяПодсказка" id="269"/>
+										</InputField>
+										<InputField name="ДопУслугиРезультатСтоимость" id="270">
+											<DataPath>ДопУслугиРезультат.Стоимость</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>4</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ContextMenu name="ДопУслугиРезультатСтоимостьКонтекстноеМеню" id="271"/>
+											<ExtendedTooltip name="ДопУслугиРезультатСтоимостьРасширеннаяПодсказка" id="272"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ГородОтправки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Город отправки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ГородПолучения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Город получения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипГруза" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип груза</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбщийВес" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общий вес (кг)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбщийОбъем" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общий объем (м3)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДлинаГруза" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Длина (см)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВысотаГруза" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Высота (см)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ШиринаГруза" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ширина (см)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбщаяСтоимостьГруза" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общая стоимость груза</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоМест" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество мест</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипыШин" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Типы шин</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Стоимость" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыездЗаГрузомСтоимость" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выезд за грузом стоимость</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДоставкаГрузаСтоимость" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доставка груза стоимость</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДопУслугиРезультат" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доп услуги результат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Услуга" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Услуга</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Стоимость" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стоимость</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДопУслугиСписок" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доп услуги список</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ДопУслуга" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доп услуга</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДопУслугаИД" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доп услуга ИД</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗначениеИД" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение ИД</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Рассчитать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассчитать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассчитать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Рассчитать</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СписокДобавить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список добавить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СписокДобавить</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ДопУслуги" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доп. услуги</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доп услуги</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДопУслуги</Action>
+		</Command>
+	</Commands>
+</Form>
